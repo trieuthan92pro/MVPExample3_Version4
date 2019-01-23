@@ -20,7 +20,7 @@ public class AudioAdapter extends RecyclerView.Adapter<AudioAdapter.ViewHolder> 
 
     private List<Audio> audioList;
     private Context context;
-    private ItemClickListener mItemClickListener;
+    private static ItemClickListener mItemClickListener;
 
     public AudioAdapter(Context context, List<Audio> list, ItemClickListener listener){
         mItemClickListener = listener;
@@ -64,7 +64,7 @@ public class AudioAdapter extends RecyclerView.Adapter<AudioAdapter.ViewHolder> 
         return audioList.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder
+    public static class ViewHolder extends RecyclerView.ViewHolder
             implements View.OnClickListener {
         ImageView imageViewIcon;
         TextView textViewTitle;
